@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { margin: 0; padding: 16px; font: 14px/1.4 system-ui, sans-serif; color: #1d2433; background: #f7f9fc; }
+    h1 { font-size: 16px; margin: 0 0 12px; }
+    label { display: block; margin: 10px 0 4px; font-weight: 600; }
+    input[type=file], input[type=range] { width: 100%; }
+    .row { display: flex; gap: 8px; margin-top: 14px; }
+    button { flex: 1; padding: 9px; border: 0; border-radius: 6px; font: inherit; cursor: pointer; }
+    #add { background: #2a5bd7; color: #fff; }
+    #clear { background: #e3e8f2; color: #1d2433; }
+    button:focus-visible, input:focus-visible { outline: 2px solid #2a5bd7; outline-offset: 2px; }
+    #status { margin-top: 10px; min-height: 18px; color: #556; font-size: 13px; }
+    small { color: #667; }
+  </style>
+</head>
+<body>
+  <h1>Image Placer</h1>
+  <label for="file">Image chunein</label>
+  <input type="file" id="file" accept="image/*">
+
+  <label for="size">Size: <span id="sizeVal">200</span> px</label>
+  <input type="range" id="size" min="50" max="800" value="200">
+
+  <label for="opacity">Opacity: <span id="opVal">100</span>%</label>
+  <input type="range" id="opacity" min="10" max="100" value="100">
+
+  <div class="row">
+    <button id="add">Page par lagayein</button>
+    <button id="clear">Sab hatayein</button>
+  </div>
+  <div id="status"></div>
+  <small>Page par image ko drag karein. Mouse wheel se size badlein. Double click se hata dein.</small>
+  <script src="popup.js"></script>
+</body>
+</html>

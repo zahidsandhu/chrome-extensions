@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+  <meta charset="utf-8">
+  <title>Focus jari hai</title>
+  <style>
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #eef3f8; color: #14213d; font: 16px/1.6 system-ui, sans-serif; text-align: center; }
+    main { max-width: 420px; padding: 24px; }
+    h1 { font-size: 26px; margin: 0 0 6px; }
+    #time { font-size: 64px; font-weight: 700; color: #d94436; font-variant-numeric: tabular-nums; margin: 8px 0; }
+    p { color: #5f6b85; margin: 6px 0; }
+    button, a.btn { display: inline-block; margin-top: 14px; padding: 10px 18px; border: 0; border-radius: 8px; background: #14213d; color: #fff; font: inherit; font-weight: 600; text-decoration: none; cursor: pointer; }
+    button:focus-visible, a.btn:focus-visible { outline: 2px solid #d94436; outline-offset: 2px; }
+    [hidden] { display: none; }
+  </style>
+</head>
+<body>
+  <main>
+    <section id="active">
+      <h1>Ye site abhi band hai</h1>
+      <p id="site"></p>
+      <div id="time">--:--</div>
+      <p>Focus session khatam hone mein baqi waqt.</p>
+      <button id="back">Wapas jayein</button>
+    </section>
+    <section id="done" hidden>
+      <h1>Focus khatam</h1>
+      <p>Ab aap site dobara khol sakte hain.</p>
+      <a class="btn" id="open" href="#">Site kholein</a>
+    </section>
+  </main>
+  <script src="common.js"></script>
+  <script src="blocked.js"></script>
+</body>
+</html>

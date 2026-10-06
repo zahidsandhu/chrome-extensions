@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Namaz Waqt",
+  "version": "1.0",
+  "description": "Namaz ke auqat dekhein aur waqt par notification payein.",
+  "permissions": ["alarms", "notifications", "storage"],
+  "host_permissions": ["https://api.aladhan.com/*"],
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": { "48": "icon48.png", "128": "icon128.png" }
+  },
+  "icons": { "48": "icon48.png", "128": "icon128.png" }
+}

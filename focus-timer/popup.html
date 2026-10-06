@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+  <meta charset="utf-8">
+  <style>
+    :root { --bg:#eef3f8; --ink:#14213d; --muted:#5f6b85; --line:#d3dcea; --accent:#d94436; --card:#ffffff; }
+    body.break { --accent:#2f7d6d; }
+    * { box-sizing: border-box; }
+    body { width: 300px; margin: 0; padding: 16px; background: var(--bg); color: var(--ink); font: 14px/1.5 system-ui, sans-serif; }
+    .phase { text-align: center; font-weight: 600; color: var(--accent); }
+    #time { text-align: center; font-size: 52px; font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: 1px; margin: 2px 0 10px; }
+    .row { display: flex; gap: 8px; }
+    button { flex: 1; padding: 10px; border: 0; border-radius: 8px; font: inherit; font-weight: 600; cursor: pointer; }
+    #main { background: var(--accent); color: #fff; }
+    #second { background: var(--line); color: var(--ink); }
+    #second[hidden] { display: none; }
+    button:focus-visible, input:focus-visible, textarea:focus-visible, summary:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+    #count { text-align: center; color: var(--muted); font-size: 13px; margin-top: 10px; }
+    details { margin-top: 12px; border-top: 1px solid var(--line); padding-top: 10px; }
+    summary { cursor: pointer; color: var(--muted); }
+    label { display: block; margin: 10px 0 3px; font-size: 12px; color: var(--muted); }
+    input, textarea { width: 100%; padding: 6px 8px; border: 1px solid var(--line); border-radius: 6px; background: var(--card); color: var(--ink); font: inherit; }
+    textarea { height: 120px; resize: vertical; }
+    .nums { display: flex; gap: 8px; }
+    .nums > div { flex: 1; }
+    #save { margin-top: 10px; width: 100%; background: var(--ink); color: #fff; }
+    #msg { text-align: center; font-size: 12px; color: var(--muted); min-height: 18px; margin-top: 6px; }
+  </style>
+</head>
+<body>
+  <div class="phase" id="phase">Tayyar</div>
+  <div id="time">25:00</div>
+  <div class="row">
+    <button id="main">Shuru karein</button>
+    <button id="second" hidden>Reset</button>
+  </div>
+  <div id="count"></div>
+
+  <details>
+    <summary>Settings aur block list</summary>
+    <div class="nums">
+      <div><label for="focusMin">Focus (minute)</label><input id="focusMin" type="number" min="1" max="120"></div>
+      <div><label for="breakMin">Break (minute)</label><input id="breakMin" type="number" min="1" max="60"></div>
+    </div>
+    <label for="blocklist">Focus ke dauran band websites (har line mein ek)</label>
+    <textarea id="blocklist" spellcheck="false"></textarea>
+    <button id="save">Save karein</button>
+  </details>
+  <div id="msg"></div>
+
+  <script src="common.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

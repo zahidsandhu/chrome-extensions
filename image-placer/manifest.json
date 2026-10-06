@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Image Placer",
+  "version": "1.1",
+  "description": "Kisi bhi website par apni image laga kar drag aur resize karein.",
+  "action": { "default_title": "Image Placer" },
+  "background": { "service_worker": "background.js" },
+  "side_panel": { "default_path": "popup.html" },
+  "permissions": ["scripting", "sidePanel"],
+  "host_permissions": ["<all_urls>"]
+}

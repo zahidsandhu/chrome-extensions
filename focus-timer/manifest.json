@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Focus Timer",
+  "version": "1.0",
+  "description": "Pomodoro timer jo focus ke dauran distract karne wali websites band kar deta hai.",
+  "permissions": ["alarms", "notifications", "storage", "tabs"],
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": { "48": "icon48.png", "128": "icon128.png" }
+  },
+  "icons": { "48": "icon48.png", "128": "icon128.png" }
+}
